@@ -1,5 +1,6 @@
 .sidebar-sections__back-to-forum:has(~ .collection-sidebar__main-btn) {
-  display: none;
+  /* display: none; */
+  order: -20;
 }
 
 .discourse-collections-sidebar-panel {
@@ -23,7 +24,7 @@
   font-size: var(--font-0);
   line-height: var(--line-height-large);
   padding: 0;
-  order: -1;
+  order: -10;
   color: var(--d-sidebar-header-color) !important;
 
   svg.d-icon-arrow-left {
@@ -110,15 +111,12 @@
 }
 
 .discourse-collections-sidebar-panel {
-  .sidebar-section[data-section-name="discourse-collections-sidebar__falsecollection-section-header"] {
-    order: 1;
-  }
-  
+  .sidebar-section[data-section-name="discourse-collections-sidebar__falsecollection-section-header"],
   .sidebar-section[data-section-name="discourse-collections-sidebar::root"] {
-    order: 2;
+    order: -1;
   }
   
-  .sidebar-section[data-section-name="discourse-collections-sidebar__subcollection__sub-collection-header"] {
-    order: 3;
+  .sidebar-section[data-section-name*="discourse-collections-sidebar__subcollection"] {
+    order: 0;
   }
 }
