@@ -43,7 +43,7 @@
 }
 
 .sidebar-panel-header__collection {
-  order: -1;
+  order: -2;
   padding-bottom: 0.5em;
   border-bottom: 1px solid var(--d-sidebar-border-color);
   margin-bottom: 0.5em;
@@ -58,14 +58,10 @@
       order: -1;
       color: var(--d-sidebar-header-color) !important;
 
-      // padding-left: var(--d-sidebar-row-horizontal-padding);
       svg.d-icon-layer-group {
         height: 0.8em;
         width: 0.8em;
         color: var(--d-sidebar-header-color) !important;
-
-        // padding: calc((var(--d-sidebar-section-link-prefix-width) - 0.8em) / 2);
-        // margin-right: var(--d-sidebar-section-link-prefix-margin-right);
       }
 
       svg.d-icon-arrow-right {
@@ -111,11 +107,18 @@
 }
 
 .discourse-collections-sidebar-panel {
+  display: flex;
+  flex-direction: column;
+
+  .sidebar-panel-header {
+    order: -2; // pinned at top
+  }
+
   .sidebar-section[data-section-name="discourse-collections-sidebar__falsecollection-section-header"],
   .sidebar-section[data-section-name="discourse-collections-sidebar::root"] {
     order: -1;
   }
-  
+
   .sidebar-section[data-section-name*="discourse-collections-sidebar__subcollection"] {
     order: 0;
   }
