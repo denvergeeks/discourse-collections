@@ -113,11 +113,12 @@
   .sidebar-section[data-section-name="discourse-collections-sidebar__falsecollection-section-header"] {
     order: 1;
   }
-
+  
+  .sidebar-section[data-section-name="discourse-collections-sidebar::root"] {
+    order: 1;
+  }
+  
   .sidebar-section[data-section-name="discourse-collections-sidebar__subcollection__sub-collection-header"] {
     order: 2;
   }
 }
-
-
-
